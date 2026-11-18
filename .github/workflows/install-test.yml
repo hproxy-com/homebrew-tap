@@ -1,0 +1,32 @@
+# Written by package-managers.mjs: install hproxy from this tap the way a stranger does, on every system it serves.
+name: Install test
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  brew:
+    name: brew install on ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, macos-15-intel, ubuntu-latest, ubuntu-24.04-arm]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Homebrew on the path
+        run: |
+          if ! command -v brew >/dev/null; then
+            if [ ! -x /home/linuxbrew/.linuxbrew/bin/brew ]; then
+              NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+            fi
+            echo "/home/linuxbrew/.linuxbrew/bin" >> "$GITHUB_PATH"
+          fi
+      - name: Install from this tap
+        run: brew install hproxy-com/tap/hproxy
+      - name: It answers with this version
+        run: |
+          hproxy --version | tee said.txt
+          grep -q "hproxy 0.4.8" said.txt
+          brew test hproxy-com/tap/hproxy
