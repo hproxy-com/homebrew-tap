@@ -1,30 +1,30 @@
-# Written by D:/dev_0_claude_tools/release/package-managers.mjs from the SHA256SUMS of cli-v0.4.8
-# (built in public: https://github.com/hproxy-com/proxy-all-in-one-tool/releases/tag/cli-v0.4.8). Changes by hand are replaced.
+# Written by D:/dev_0_claude_tools/release/package-managers.mjs from the SHA256SUMS of cli-v0.4.9
+# (built in public: https://github.com/hproxy-com/proxy-all-in-one-tool/releases/tag/cli-v0.4.9). Changes by hand are replaced.
 class Hproxy < Formula
   desc "Proxy checker, free proxy list and IP lookup, with an MCP server for AI tools"
   homepage "https://hproxy.com/tools/ai"
-  version "0.4.8"
+  version "0.4.9"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/hproxy-com/proxy-all-in-one-tool/releases/download/cli-v0.4.8/hproxy-cli-macos-arm64"
-      sha256 "a599bd66931386fdbbba4475c0414f9cf19e67015e3e8b66c00f348815e08a71"
+      url "https://github.com/hproxy-com/proxy-all-in-one-tool/releases/download/cli-v0.4.9/hproxy-cli-macos-arm64"
+      sha256 "00f336352e188c0693aaedc30da202cf7f1f9013e8743b1ccea10e32815db386"
     end
     on_intel do
-      url "https://github.com/hproxy-com/proxy-all-in-one-tool/releases/download/cli-v0.4.8/hproxy-cli-macos-x86_64"
-      sha256 "a9a7b3194188f8e3fdda5c4a690706b50eb5e2ca987685d81e34aa3c3d0d248e"
+      url "https://github.com/hproxy-com/proxy-all-in-one-tool/releases/download/cli-v0.4.9/hproxy-cli-macos-x86_64"
+      sha256 "3571f004bed288059dd38727e10d5df775a063409fbd3e681b3a726b6aeeab07"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/hproxy-com/proxy-all-in-one-tool/releases/download/cli-v0.4.8/hproxy-cli-linux-arm64"
-      sha256 "ed9e4acd42e12ada6d4d8a17898b4b8a79f706c5755ffd4ec0373839bd8b1401"
+      url "https://github.com/hproxy-com/proxy-all-in-one-tool/releases/download/cli-v0.4.9/hproxy-cli-linux-arm64"
+      sha256 "69d99bb504b8fcfbd5e3cbf1dedafe1598538d1511f85cf6eb6bc379539ac1ec"
     end
     on_intel do
-      url "https://github.com/hproxy-com/proxy-all-in-one-tool/releases/download/cli-v0.4.8/hproxy-cli-linux-x86_64"
-      sha256 "d6fd2a8ff488d6f8c3a77fd8c8b8b8e8683e44aad42b82cf72dcb9cee10fd130"
+      url "https://github.com/hproxy-com/proxy-all-in-one-tool/releases/download/cli-v0.4.9/hproxy-cli-linux-x86_64"
+      sha256 "cb17ed128df2d8e851b2a50fc73d50816aea1a04d19599a3b548cdc579bfd3b4"
     end
   end
 

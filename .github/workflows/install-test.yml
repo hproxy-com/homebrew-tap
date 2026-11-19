@@ -28,5 +28,5 @@ jobs:
       - name: It answers with this version
         run: |
           hproxy --version | tee said.txt
-          grep -q "hproxy 0.4.8" said.txt
+          grep -q "hproxy 0.4.9" said.txt
           brew test hproxy-com/tap/hproxy
